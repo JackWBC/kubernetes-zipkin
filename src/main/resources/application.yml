@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: kubernetes-zipkin
+  main:
+      allow-bean-definition-overriding: true
+server:
+  port: 8080
+
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+
